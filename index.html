@@ -7,9 +7,18 @@
     <link rel="stylesheet" href="TemplateData/style.css">
     <script src="Build/UnityLoader.js"></script>
     <script>
+      var screenHeight;
+      var screenWidth;
+      window.onload=function()
+	{
+		screenWidth=window.innerWidth;
+    screenHeight=window.innerHeight;
+	}
+
       UnityLoader.instantiate("unityContainer", "Build/SnakeGame_by_vilisix.json");
-      document.getElementById('unityContainer').style.width=window.innerWidth;
-      document.getElementById('unityContainer').style.height=window.innerHeight;
+      
+      document.getElementById('unityContainer').style.width=screenWidth;
+      document.getElementById('unityContainer').style.height=screenHeight;
       document.getElementById('unityContainer').style.margin="center";
     </script>
   </head>
